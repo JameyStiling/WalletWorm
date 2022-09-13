@@ -3,8 +3,6 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { useMoralis, useNativeBalance } from "react-moralis";
 
-
-
 function Index() {
   const { isAuthenticated, logout } = useMoralis();
   const router = useRouter();
@@ -20,10 +18,7 @@ function Index() {
         <title>WormWallet Dashboard</title>
       </Head>
       <div>{balance.formatted}</div>
-      <button
-        className="px-7 py-4 text-xl rounded-xl bg-red-300"
-        onClick={logout}
-      >
+      <button className="button bg-red-300" onClick={logout}>
         Logout
       </button>
     </div>
