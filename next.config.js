@@ -5,6 +5,9 @@ const nextConfig = {
   typescript: {
     tsconfigPath: "./tsconfig.json",
   },
+  images: {
+    domains: ["lh3.googleusercontent.com", "presalemetadata.mythical.market"],
+  },
 };
 
 module.exports = nextConfig;

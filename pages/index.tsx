@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useMoralis } from "react-moralis";
 import { useEffect } from "react";
@@ -30,7 +31,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-wrap justify-center mt-8 gap-4">
-              <button
+              {/* <button
                 onClick={() =>
                   authenticate({
                     signingMessage: "Authorize Wallet",
@@ -40,15 +41,23 @@ export default function Home() {
                 className="button animate-pulse"
               >
                 Login using WalletConnect
+              </button> */}
+              <button
+                onClick={() =>
+                  authenticate({
+                    signingMessage: "Authorize Wallet",
+                  })
+                }
+                className="button animate-pulse"
+              >
+                Login using MetaMask
               </button>
-
-              <a className="button2" href="/about">
-                Learn More
-              </a>
+              <Link href="/about">
+                <a className="button2"> Learn More</a>
+              </Link>
             </div>
           </div>
         </div>
-        <h1>Welcome to Wallet Worm!</h1>
       </section>
     </div>
   );
